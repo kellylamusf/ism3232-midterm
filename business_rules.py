@@ -22,13 +22,13 @@ def calculate_print_cost(copy_price: float, copies: int) -> float:
 def get_volume_discount(copies: int, student_org: bool = False) -> float:
     """Return the discount rate as a decimal, so 8%, is 0.08 (rules 2 and 3)."""
     if copies >= TIER_TWO_COPIES:
-        return DISCOUNT_TWO
+        rate = DISCOUNT_TWO
     elif copies >= TIER_ONE_COPIES:
-        return DISCOUNT_ONE
+        rate = DISCOUNT_ONE
     else:
         return NO_DISCOUNT
     if student_org:
-        return STUDENT_ORG_DISCOUNT
+        rate += STUDENT_ORG_DISCOUNT
     return rate
 
 def calculate_job_total(copy_price: float, copies: int, student_org: bool = False) -> float:
