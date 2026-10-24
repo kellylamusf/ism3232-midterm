@@ -1,7 +1,5 @@
 # main.py
-from business_rules import (
-    
-)
+
 jobs = [
     {"title": "Flyers", "copy_price": 0.25, "copies": 100, "student_org": False},
     {"title": "Menus", "copy_price": 0.50, "copies": 150, "student_org": True},
